@@ -1,0 +1,198 @@
+body {
+    font-family: 'Open Sans', Arial, sans-serif;
+    background-color: #F9F9F6;
+    color: #333333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #004225;
+    color: #F5F5F5;
+    padding: 15px 20px; 
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    font-size: 2em; 
+    margin: 0; 
+}
+
+.subtitle {
+    font-size: 1em; 
+    color: #D3D3D3;
+    margin-top: 4px; 
+    font-weight: 300;
+    text-align: center;
+    letter-spacing: 0.5px;
+    line-height: 1.4;
+}
+
+#search {
+    text-align: center;
+    padding: 30px;
+    background-color: #F9F9F6;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 600px;
+    border-radius: 8px;
+}
+
+#search-bar {
+    padding: 12px;
+    width: 70%;
+    font-size: 16px;
+    border: 1px solid #AAAAAA;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+#search-button {
+    padding: 12px;
+    font-size: 16px;
+    background-color: #145A32; 
+    color: white;
+    border: 2px solid #D4AF37;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#search-button:hover {
+    background-color: #0E4A28;
+}
+
+#map-container {
+    height: 500px;
+    background-color: #F9F9F6; 
+    margin: 20px auto;
+    max-width: 1000px;
+    border: 1px solid #CCCCCC;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+#parking-and-reservations {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+#parking-list, #user-reservations {
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 48%;
+}
+
+#parking-spots {
+    list-style-type: none;
+    padding: 0;
+}
+
+#parking-spots li {
+    padding: 15px;
+    background: #f9F9F9F6;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#parking-spots li button {
+    padding: 8px 12px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#parking-spots li button:hover {
+    background-color: #218838;
+}
+
+.reservation {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    padding: 20px;
+    border-radius: 4px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1001;
+}
+
+.error-message {
+    background-color: #ee0d23;
+}
+
+.success-message {
+    background-color: #28a745;
+}
+
+.info-message {
+    background-color: #0c5460;
+}
+
+#reservation-modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #F9F9F6;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+#reservation-modal input {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#reservation-modal button {
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); 
+    backdrop-filter: blur(4px);
+    z-index: 999;
+}

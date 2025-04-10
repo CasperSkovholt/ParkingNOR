@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Parking Reservation System</title>
+    <link rel="stylesheet" href="SmartParking.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3T-1vDgagwoX-ABbHd1fLQDd1Yx_lPzc&callback=initMap" async defer></script>
+    <script src="SmartParking.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Smart Parking Reservation System</h1>
+        <p class="subtitle">Find and reserver a parkingplace in Majorstuen quick and easy</p>
+    </header>
+    <main>
+        <section id="search">
+            <input type="text" id="search-bar" placeholder="Search for parking...">
+            <button id="search-button">Search</button>
+        </section>
+        <section id="map">
+            <div id="map-container"></div>
+        </section>
+        <section id="parking-and-reservations">
+            <div id="parking-list">
+                <h2>Available Parking Spots</h2>
+                <ul id="parking-spots">
+                    <!-- List of parking spots will be dynamically populated here -->
+                </ul>
+            </div>
+            <div id="user-reservations">
+                <h2>Your Reservations</h2>
+                <ul id="reservations-list">
+                    <!-- List of user reservations will be dynamically populated here -->
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <div id="reservation-modal">
+        <form id="reservation-form">
+            <label for="reservation-time">Enter reservation time (e.g., 13:00 - 14:00):</label>
+            <input type="text" id="reservation-time" required>
+            <label for="email">Enter your email:</label>
+            <input type="email" id="email" required>
+            <button type="submit">Confirm Reservation</button>
+        </form>
+    </div>
+    <div id="modal-overlay"></div>
+</body>
+</html>
